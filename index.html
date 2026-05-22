@@ -28,7 +28,7 @@ overflow-x:hidden;
 color:#2d2130;
 }
 
-/* MAIN LAYOUT */
+/* LAYOUT */
 
 .container{
 display:flex;
@@ -38,9 +38,9 @@ min-height:100vh;
 /* SIDEBAR */
 
 .sidebar{
-width:250px;
-background:linear-gradient(to bottom,#341931,#472242);
-padding:40px 28px;
+width:260px;
+background:linear-gradient(to bottom,#341931,#4c2548);
+padding:42px 30px;
 position:fixed;
 top:0;
 left:0;
@@ -51,31 +51,36 @@ justify-content:space-between;
 }
 
 .logo{
-text-align:left;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
 }
 
 .logo-icon{
-font-size:70px;
-color:#dca76d;
-margin-bottom:10px;
+font-size:68px;
+color:#d8a76d;
+margin-bottom:14px;
+line-height:1;
 }
 
 .logo h1{
 font-family:'Cormorant Garamond',serif;
-font-size:55px;
+font-size:54px;
 line-height:0.9;
 font-weight:600;
 color:white;
+margin:0;
 }
 
 .logo p{
-margin-top:15px;
+margin-top:14px;
+padding-left:4px;
 font-size:14px;
 letter-spacing:5px;
-color:#dca76d;
+color:#d8a76d;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 .nav{
 margin-top:50px;
@@ -90,7 +95,7 @@ border-radius:50px;
 text-decoration:none;
 color:white;
 margin-bottom:16px;
-font-size:19px;
+font-size:18px;
 transition:0.3s;
 }
 
@@ -104,7 +109,7 @@ background:#8f617f;
 margin-top:25px;
 font-size:15px;
 line-height:1.8;
-color:#f5edf0;
+color:#f6eef2;
 font-style:italic;
 }
 
@@ -112,7 +117,7 @@ font-style:italic;
 display:inline-block;
 margin-top:28px;
 padding:16px 28px;
-background:#d76d4b;
+background:#d96f4b;
 border-radius:18px;
 text-decoration:none;
 color:white;
@@ -131,37 +136,37 @@ color:white;
 /* MAIN */
 
 .main{
-margin-left:250px;
-width:calc(100% - 250px);
-padding:45px 55px;
+margin-left:260px;
+width:calc(100% - 260px);
+padding:45px 60px;
 }
 
-/* TOP */
+/* TOP ICONS */
 
 .top-icons{
 display:flex;
 justify-content:flex-end;
-gap:25px;
+gap:24px;
 font-size:30px;
-color:#3c1d38;
-margin-bottom:30px;
+color:#3b1d37;
+margin-bottom:28px;
 }
 
 /* HERO */
 
 .hero{
 display:grid;
-grid-template-columns:0.9fr 1.3fr;
-gap:45px;
+grid-template-columns:0.78fr 1.45fr;
+gap:40px;
 align-items:center;
 }
 
 .hero-title{
 font-family:'Cormorant Garamond',serif;
-font-size:68px;
-line-height:0.95;
+font-size:60px;
+line-height:0.92;
 font-weight:600;
-margin-bottom:22px;
+margin-bottom:20px;
 }
 
 .peach{
@@ -173,16 +178,16 @@ color:#401f3b;
 }
 
 .heart{
-font-size:50px;
+font-size:46px;
 color:#d96f4b;
-margin-bottom:25px;
+margin-bottom:22px;
 }
 
 .hero-text{
-font-size:20px;
+font-size:19px;
 line-height:1.9;
-max-width:620px;
-color:#3e3239;
+max-width:520px;
+color:#43343d;
 }
 
 /* BUTTONS */
@@ -191,7 +196,7 @@ color:#3e3239;
 display:flex;
 align-items:center;
 gap:28px;
-margin-top:42px;
+margin-top:40px;
 }
 
 .main-btn{
@@ -202,7 +207,7 @@ text-decoration:none;
 color:white;
 font-weight:600;
 font-size:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .watch{
@@ -229,10 +234,10 @@ background:white;
 
 .hero-image img{
 width:100%;
-height:620px;
+height:670px;
 object-fit:cover;
 object-position:center;
-border-radius:38px;
+border-radius:40px;
 box-shadow:0 18px 35px rgba(0,0,0,0.12);
 }
 
@@ -272,7 +277,7 @@ border:8px solid #f8f3ed;
 }
 
 .icon1{
-background:#b5ab8b;
+background:#b8ac92;
 }
 
 .icon2{
@@ -285,12 +290,12 @@ background:#9a688d;
 
 .card h3{
 font-family:'Cormorant Garamond',serif;
-font-size:40px;
-margin-bottom:8px;
+font-size:38px;
+margin-bottom:10px;
 color:#401f3b;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 
 @media(max-width:1200px){
 
@@ -298,16 +303,16 @@ color:#401f3b;
 grid-template-columns:1fr;
 }
 
-.cards{
-grid-template-columns:1fr;
-}
-
 .hero-title{
-font-size:58px;
+font-size:54px;
 }
 
 .hero-image img{
-height:500px;
+height:520px;
+}
+
+.cards{
+grid-template-columns:1fr;
 }
 
 }
@@ -322,7 +327,7 @@ flex-direction:column;
 position:relative;
 width:100%;
 height:auto;
-padding:35px 25px;
+padding:35px 24px;
 }
 
 .main{
@@ -337,7 +342,7 @@ gap:40px;
 }
 
 .hero-title{
-font-size:48px;
+font-size:46px;
 line-height:0.95;
 }
 
@@ -346,7 +351,7 @@ font-size:18px;
 }
 
 .hero-image img{
-height:360px;
+height:390px;
 }
 
 .cards{
@@ -361,6 +366,10 @@ align-items:flex-start;
 
 .top-icons{
 justify-content:flex-start;
+}
+
+.logo h1{
+font-size:46px;
 }
 
 }
