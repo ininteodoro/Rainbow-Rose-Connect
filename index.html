@@ -22,13 +22,13 @@ box-sizing:border-box;
 }
 
 body{
-background:#f8f3ed;
+background:#f7f3ee;
 font-family:'Montserrat',sans-serif;
 overflow-x:hidden;
-color:#2d2130;
+color:#2b1c2c;
 }
 
-/* MAIN LAYOUT */
+/* MAIN */
 
 .container{
 display:flex;
@@ -38,9 +38,9 @@ min-height:100vh;
 /* SIDEBAR */
 
 .sidebar{
-width:260px;
-background:linear-gradient(to bottom,#2a0f2f,#4a2146);
-padding:40px 30px;
+width:295px;
+background:linear-gradient(180deg,#240727 0%,#4b1f47 100%);
+padding:38px 30px;
 position:fixed;
 top:0;
 left:0;
@@ -56,72 +56,70 @@ flex-direction:column;
 align-items:flex-start;
 }
 
-.logo-icon{
-font-size:72px;
-color:#d9a15f;
-line-height:1;
-margin-bottom:14px;
+.logo img{
+width:120px;
+margin-bottom:18px;
 }
 
 .logo h1{
 font-family:'Cormorant Garamond',serif;
-font-size:54px;
-line-height:0.9;
+font-size:66px;
+line-height:0.88;
 font-weight:600;
 color:white;
 }
 
 .logo p{
 margin-top:14px;
-font-size:14px;
-letter-spacing:6px;
-color:#d9a15f;
+font-size:15px;
+letter-spacing:7px;
+color:#d7a15e;
 padding-left:4px;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 .nav{
-margin-top:48px;
+margin-top:45px;
 }
 
 .nav a{
 display:flex;
 align-items:center;
-gap:14px;
-padding:17px 22px;
+gap:18px;
+padding:20px 24px;
+margin-bottom:18px;
 border-radius:50px;
 text-decoration:none;
+font-size:19px;
 color:white;
-margin-bottom:16px;
-font-size:18px;
 transition:0.3s;
 }
 
 .nav a.active{
-background:#8d5e80;
+background:#8f5f82;
 }
 
-/* BUTTON */
-
-.contact-btn{
-display:inline-block;
-margin-top:30px;
-padding:16px 28px;
-background:#dc6f45;
-border-radius:18px;
-text-decoration:none;
-color:white;
-font-weight:600;
-font-size:15px;
+.nav a:hover{
+background:#724d68;
 }
 
-/* SOCIALS */
+/* SOCIAL */
 
 .socials{
 display:flex;
-gap:18px;
-margin-top:28px;
+gap:22px;
+margin-top:30px;
+}
+
+.socials span{
+width:58px;
+height:58px;
+border:1px solid rgba(255,255,255,0.4);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
 font-size:28px;
 color:white;
 }
@@ -129,9 +127,9 @@ color:white;
 /* MAIN CONTENT */
 
 .main{
-margin-left:260px;
-width:calc(100% - 260px);
-padding:45px 60px;
+margin-left:295px;
+width:calc(100% - 295px);
+padding:42px 42px 70px;
 }
 
 /* TOP ICONS */
@@ -140,47 +138,49 @@ padding:45px 60px;
 display:flex;
 justify-content:flex-end;
 gap:24px;
-font-size:30px;
-color:#401f3b;
-margin-bottom:28px;
+font-size:32px;
+color:#351737;
+margin-bottom:25px;
 }
 
 /* HERO */
 
 .hero{
 display:grid;
-grid-template-columns:0.78fr 1.45fr;
-gap:42px;
+grid-template-columns:0.88fr 1.12fr;
+gap:48px;
 align-items:center;
 }
 
+/* TEXT */
+
 .hero-title{
 font-family:'Cormorant Garamond',serif;
-font-size:58px;
-line-height:0.92;
+font-size:78px;
+line-height:0.9;
 font-weight:600;
-margin-bottom:20px;
+margin-bottom:24px;
 }
 
-.peach{
-color:#dc6f45;
+.orange{
+color:#dd6f45;
 }
 
 .plum{
-color:#3d1837;
+color:#341437;
 }
 
 .heart{
-font-size:46px;
-color:#dc6f45;
-margin-bottom:20px;
+font-size:55px;
+color:#dd6f45;
+margin-bottom:22px;
 }
 
 .hero-text{
-font-size:19px;
+font-size:20px;
 line-height:1.9;
-max-width:520px;
-color:#43343d;
+color:#393039;
+max-width:620px;
 }
 
 /* ACTIONS */
@@ -189,37 +189,37 @@ color:#43343d;
 display:flex;
 align-items:center;
 gap:28px;
-margin-top:38px;
+margin-top:40px;
 }
 
 .main-btn{
-background:#dc6f45;
-padding:20px 36px;
-border-radius:50px;
+background:#dd6f45;
+padding:22px 38px;
+border-radius:60px;
 text-decoration:none;
 color:white;
+font-size:18px;
 font-weight:600;
-font-size:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+box-shadow:0 10px 24px rgba(0,0,0,0.08);
 }
 
 .watch{
 display:flex;
 align-items:center;
-gap:14px;
-font-size:17px;
-color:#3d2739;
+gap:16px;
+font-size:18px;
+color:#351737;
 }
 
 .play{
-width:68px;
-height:68px;
+width:76px;
+height:76px;
 border-radius:50%;
-border:2px solid #6d4b63;
+border:2px solid #59395c;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:24px;
+font-size:28px;
 background:white;
 }
 
@@ -227,9 +227,9 @@ background:white;
 
 .hero-image img{
 width:100%;
-height:700px;
+height:630px;
 object-fit:cover;
-object-position:center;
+object-position:right center;
 border-radius:40px;
 box-shadow:0 18px 35px rgba(0,0,0,0.12);
 }
@@ -239,8 +239,8 @@ box-shadow:0 18px 35px rgba(0,0,0,0.12);
 .cards{
 display:grid;
 grid-template-columns:1fr 1fr 1fr;
-gap:30px;
-margin-top:70px;
+gap:34px;
+margin-top:75px;
 }
 
 .card{
@@ -249,55 +249,60 @@ text-align:center;
 
 .card img{
 width:100%;
-height:260px;
+height:270px;
 object-fit:cover;
 border-radius:28px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+box-shadow:0 10px 24px rgba(0,0,0,0.08);
 }
 
 .card-icon{
-width:76px;
-height:76px;
+width:82px;
+height:82px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-margin:-38px auto 18px;
+margin:-42px auto 18px;
 position:relative;
-font-size:32px;
+font-size:34px;
 color:white;
-border:8px solid #f8f3ed;
+border:8px solid #f7f3ee;
 }
 
 .icon1{
-background:#b6ab92;
+background:#b5aa8f;
 }
 
 .icon2{
-background:#dc6f45;
+background:#de7147;
 }
 
 .icon3{
-background:#99648d;
+background:#9a6a92;
 }
 
 .card h3{
-font-family:'Cormorant Garamond',serif;
-font-size:38px;
-margin-bottom:10px;
-color:#3d1837;
+font-family:'Montserrat',sans-serif;
+font-size:20px;
+font-weight:700;
+color:#351737;
+margin-top:12px;
+letter-spacing:0.5px;
+}
+
+.line{
+width:45px;
+height:2px;
+background:#dd6f45;
+margin:18px auto 0;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:1200px){
+@media(max-width:1300px){
 
 .hero{
 grid-template-columns:1fr;
-}
-
-.hero-title{
-font-size:52px;
 }
 
 .hero-image img{
@@ -326,7 +331,7 @@ padding:35px 24px;
 .main{
 margin-left:0;
 width:100%;
-padding:30px 22px;
+padding:30px 22px 60px;
 }
 
 .hero{
@@ -335,8 +340,7 @@ gap:40px;
 }
 
 .hero-title{
-font-size:44px;
-line-height:0.95;
+font-size:52px;
 }
 
 .hero-text{
@@ -344,12 +348,13 @@ font-size:18px;
 }
 
 .hero-image img{
-height:390px;
+height:420px;
+object-position:right center;
 }
 
 .cards{
 grid-template-columns:1fr;
-gap:50px;
+gap:52px;
 }
 
 .actions{
@@ -357,12 +362,8 @@ flex-direction:column;
 align-items:flex-start;
 }
 
-.top-icons{
-justify-content:flex-start;
-}
-
 .logo h1{
-font-size:46px;
+font-size:52px;
 }
 
 }
@@ -383,9 +384,7 @@ font-size:46px;
 
 <div class="logo">
 
-<div class="logo-icon">
-❀
-</div>
+<img src="logo.png">
 
 <h1>
 Rainbow Rose
@@ -400,7 +399,7 @@ CONNECT
 <div class="nav">
 
 <a href="#" class="active">
-⌂ HOME
+🏠 HOME
 </a>
 
 <a href="#">
@@ -423,17 +422,11 @@ CONNECT
 
 </div>
 
-<div>
-
-<a href="#" class="contact-btn">
-GET IN TOUCH
-</a>
-
 <div class="socials">
+
 <span>f</span>
 <span>◎</span>
 <span>◌</span>
-</div>
 
 </div>
 
@@ -444,9 +437,11 @@ GET IN TOUCH
 <div class="main">
 
 <div class="top-icons">
+
 <span>⌕</span>
 <span>◌</span>
 <span>◑</span>
+
 </div>
 
 <!-- HERO -->
@@ -459,7 +454,7 @@ GET IN TOUCH
 
 <h1 class="hero-title">
 
-<span class="peach">
+<span class="orange">
 MORE THAN SUPPORT,
 </span>
 
@@ -530,8 +525,10 @@ OUR STORY
 </div>
 
 <h3>
-Empowering Potential
+EMPOWERING POTENTIAL
 </h3>
+
+<div class="line"></div>
 
 </div>
 
@@ -546,8 +543,10 @@ Empowering Potential
 </div>
 
 <h3>
-Building Connections
+BUILDING CONNECTIONS
 </h3>
+
+<div class="line"></div>
 
 </div>
 
@@ -562,8 +561,10 @@ Building Connections
 </div>
 
 <h3>
-Community In Action
+COMMUNITY IN ACTION
 </h3>
+
+<div class="line"></div>
 
 </div>
 
