@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,10 +25,10 @@ body{
 background:#f8ebe5;
 font-family:'Montserrat',sans-serif;
 overflow-x:hidden;
-color:#3d2846;
+color:#342041;
 }
 
-/* LAYOUT */
+/* MAIN LAYOUT */
 
 .container{
 display:flex;
@@ -38,9 +38,9 @@ min-height:100vh;
 /* SIDEBAR */
 
 .sidebar{
-width:270px;
-background:linear-gradient(to bottom,#54294c,#2f1832);
-padding:40px 30px;
+width:230px;
+background:linear-gradient(to bottom,#53284c,#2b1730);
+padding:40px 28px;
 position:fixed;
 top:0;
 left:0;
@@ -51,30 +51,23 @@ justify-content:space-between;
 overflow:hidden;
 }
 
-.logo{
-position:relative;
-z-index:2;
-}
-
 .logo h1{
 font-family:'Cormorant Garamond',serif;
-font-size:58px;
-line-height:0.92;
+font-size:56px;
+line-height:0.9;
 color:white;
 font-weight:600;
 }
 
 .logo p{
 margin-top:14px;
-letter-spacing:8px;
+letter-spacing:7px;
 font-size:12px;
-color:#d9b36c;
+color:#d7b26d;
 }
 
 .nav{
-margin-top:60px;
-position:relative;
-z-index:2;
+margin-top:55px;
 }
 
 .nav a{
@@ -83,39 +76,35 @@ align-items:center;
 gap:14px;
 text-decoration:none;
 color:white;
-padding:16px 22px;
+padding:15px 20px;
 border-radius:40px;
 margin-bottom:18px;
-font-size:18px;
+font-size:17px;
 transition:0.3s;
 }
 
 .nav a.active{
-background:#724b68;
+background:#6f4965;
 color:#f1d27f;
-}
-
-.bottom-area{
-position:relative;
-z-index:2;
 }
 
 .bottom-text{
 font-size:15px;
 line-height:1.7;
 color:#f2dce4;
-margin-top:30px;
+margin-top:35px;
 }
 
 .button{
 display:inline-block;
 margin-top:22px;
 background:#d8a768;
-padding:16px 28px;
+padding:15px 26px;
 border-radius:14px;
 color:white;
 text-decoration:none;
 font-weight:600;
+font-size:14px;
 }
 
 .socials{
@@ -126,20 +115,12 @@ font-size:22px;
 color:white;
 }
 
-.sidebar-flower{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-opacity:0.95;
-}
-
 /* MAIN */
 
 .main{
-margin-left:270px;
-width:calc(100% - 270px);
-padding:45px 70px;
+margin-left:230px;
+width:calc(100% - 230px);
+padding:45px 65px;
 }
 
 /* TOPBAR */
@@ -160,60 +141,62 @@ font-weight:600;
 .icons{
 display:flex;
 gap:22px;
-font-size:30px;
+font-size:28px;
 }
 
 /* HERO */
 
 .hero{
 display:grid;
-grid-template-columns:1.05fr 0.95fr;
-gap:55px;
+grid-template-columns:1.2fr 1fr;
+gap:80px;
 align-items:center;
 }
 
+/* TITLE */
+
 .hero-title{
 font-family:'Cormorant Garamond',serif;
-font-size:86px;
-line-height:0.92;
+font-size:72px;
+line-height:0.95;
 font-weight:600;
 margin-bottom:28px;
 color:#2e1c3c;
+max-width:700px;
+word-break:normal;
 }
 
 .hero-title span{
-color:#be6d88;
+color:#c86f88;
 }
 
-.hero-decor{
-font-size:70px;
-color:#d2708d;
-line-height:0.5;
-margin-bottom:18px;
-}
+/* TEXT */
 
 .hero-text{
 font-size:22px;
 line-height:1.8;
 max-width:620px;
 color:#44344b;
+margin-top:10px;
 }
+
+/* BUTTONS */
 
 .actions{
 display:flex;
 align-items:center;
-gap:30px;
+gap:28px;
 margin-top:45px;
 }
 
 .main-btn{
-background:linear-gradient(to right,#7b3959,#d86f8d);
+background:linear-gradient(to right,#7b385a,#d86f8d);
 color:white;
 padding:22px 38px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-font-size:17px;
+font-size:16px;
 box-shadow:0 12px 30px rgba(0,0,0,0.12);
 }
 
@@ -221,13 +204,13 @@ box-shadow:0 12px 30px rgba(0,0,0,0.12);
 display:flex;
 align-items:center;
 gap:14px;
-font-size:17px;
+font-size:16px;
 color:#5b3352;
 }
 
 .play{
-width:58px;
-height:58px;
+width:56px;
+height:56px;
 border:1px solid #d6a5b6;
 border-radius:50%;
 display:flex;
@@ -238,43 +221,37 @@ justify-content:center;
 /* HERO IMAGE */
 
 .hero-image{
-position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .hero-image img{
 width:100%;
-height:690px;
+max-width:620px;
+height:620px;
 object-fit:cover;
 border-radius:42px;
-box-shadow:0 20px 50px rgba(0,0,0,0.12);
-}
-
-.side-floral{
-position:absolute;
-right:-55px;
-top:50%;
-transform:translateY(-50%);
-font-size:120px;
-opacity:0.8;
+box-shadow:0 20px 50px rgba(0,0,0,0.14);
 }
 
 /* GROWING */
 
 .growing{
 display:grid;
-grid-template-columns:1fr 1fr 1fr 1fr;
-gap:28px;
-margin-top:85px;
+grid-template-columns:1fr 1fr 1fr;
+gap:35px;
+margin-top:70px;
 align-items:start;
 }
 
 .grow-title{
-padding-top:40px;
+padding-top:35px;
 }
 
 .grow-small{
 font-family:'Cormorant Garamond',serif;
-font-size:72px;
+font-size:70px;
 font-style:italic;
 line-height:0.8;
 color:#d06f8c;
@@ -287,9 +264,11 @@ line-height:0.9;
 color:#312042;
 }
 
+/* CARDS */
+
 .card img{
 width:100%;
-height:295px;
+height:290px;
 object-fit:cover;
 border-radius:30px;
 box-shadow:0 12px 30px rgba(0,0,0,0.12);
@@ -306,22 +285,25 @@ color:#352347;
 
 /* RESPONSIVE */
 
-@media(max-width:1100px){
+@media(max-width:1200px){
 
 .hero{
 grid-template-columns:1fr;
+gap:50px;
+}
+
+.hero-title{
+font-size:62px;
+max-width:100%;
+}
+
+.hero-image img{
+max-width:100%;
+height:520px;
 }
 
 .growing{
 grid-template-columns:1fr 1fr;
-}
-
-.hero-title{
-font-size:70px;
-}
-
-.hero-image img{
-height:520px;
 }
 
 }
@@ -348,16 +330,17 @@ padding:30px;
 grid-template-columns:1fr;
 }
 
-.growing{
-grid-template-columns:1fr;
-}
-
 .hero-title{
-font-size:54px;
+font-size:48px;
+line-height:1;
 }
 
 .hero-text{
 font-size:20px;
+}
+
+.hero-image img{
+height:420px;
 }
 
 .actions{
@@ -365,13 +348,20 @@ flex-direction:column;
 align-items:flex-start;
 }
 
-.hero-image img{
-height:420px;
+.growing{
+grid-template-columns:1fr;
+}
+
+.topbar{
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -390,17 +380,36 @@ height:420px;
 </div>
 
 <div class="nav">
-<a href="#" class="active">⌂ HOME</a>
-<a href="#">♡ OUR CARE</a>
-<a href="#">✿ SERVICES</a>
-<a href="#">◎ COMMUNITY</a>
-<a href="#">❀ ABOUT US</a>
-<a href="#">✉ CONTACT</a>
-</div>
+
+<a href="#" class="active">
+⌂ HOME
+</a>
+
+<a href="#">
+♡ OUR CARE
+</a>
+
+<a href="#">
+✿ SERVICES
+</a>
+
+<a href="#">
+◎ COMMUNITY
+</a>
+
+<a href="#">
+❀ ABOUT US
+</a>
+
+<a href="#">
+✉ CONTACT
+</a>
 
 </div>
 
-<div class="bottom-area">
+</div>
+
+<div>
 
 <div class="bottom-text">
 Let’s grow connections together ♡
@@ -418,8 +427,6 @@ GET IN TOUCH
 
 </div>
 
-<img class="sidebar-flower" src="community.png">
-
 </div>
 
 <!-- MAIN -->
@@ -430,7 +437,9 @@ GET IN TOUCH
 
 <div class="topbar">
 
-<h2>Rainbow Rose Connect</h2>
+<h2>
+Rainbow Rose Connect
+</h2>
 
 <div class="icons">
 <span>⌕</span>
@@ -447,14 +456,16 @@ GET IN TOUCH
 <div>
 
 <h1 class="hero-title">
-<span>MORE THAN SUPPORT,</span>
-<br>
-REAL COMPANIONSHIP.
-</h1>
 
-<div class="hero-decor">
-ღ
-</div>
+<span>
+MORE THAN SUPPORT,
+</span>
+
+<br>
+
+REAL COMPANIONSHIP.
+
+</h1>
 
 <p class="hero-text">
 At Rainbow Rose Connect, we create supportive experiences where people can feel comfortable being themselves and supported every step of the way.
@@ -490,15 +501,11 @@ OUR STORY
 
 <img src="paint.png">
 
-<div class="side-floral">
-🌹
 </div>
 
 </div>
 
-</div>
-
-<!-- GROWING -->
+<!-- GROWING TOGETHER -->
 
 <div class="growing">
 
@@ -514,25 +521,28 @@ Together
 
 </div>
 
-<!-- COMMUNITY -->
-
-<div class="card">
-<img src="community.png">
-<h3>SHARED MOMENTS</h3>
-</div>
-
 <!-- CLIMB -->
 
 <div class="card">
+
 <img src="climb.png">
-<h3>BUILDING CONFIDENCE</h3>
+
+<h3>
+BUILDING CONFIDENCE
+</h3>
+
 </div>
 
 <!-- WHEELCHAIR -->
 
 <div class="card">
+
 <img src="wheelchair.png">
-<h3>COMMUNITY CONNECTION</h3>
+
+<h3>
+COMMUNITY CONNECTION
+</h3>
+
 </div>
 
 </div>
