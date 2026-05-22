@@ -22,10 +22,10 @@ box-sizing:border-box;
 }
 
 body{
-background:#f8ebe5;
+background:#f7f1e8;
 font-family:'Montserrat',sans-serif;
 overflow-x:hidden;
-color:#342041;
+color:#284645;
 }
 
 /* MAIN LAYOUT */
@@ -38,9 +38,9 @@ min-height:100vh;
 /* SIDEBAR */
 
 .sidebar{
-width:230px;
-background:linear-gradient(to bottom,#53284c,#2b1730);
-padding:40px 28px;
+width:240px;
+background:linear-gradient(to bottom,#244b4b,#173434);
+padding:42px 30px;
 position:fixed;
 top:0;
 left:0;
@@ -51,19 +51,29 @@ justify-content:space-between;
 overflow:hidden;
 }
 
+.logo{
+text-align:left;
+}
+
+.logo-icon{
+font-size:70px;
+color:#e8c27a;
+margin-bottom:8px;
+}
+
 .logo h1{
 font-family:'Cormorant Garamond',serif;
-font-size:56px;
+font-size:52px;
 line-height:0.9;
-color:white;
 font-weight:600;
+color:white;
 }
 
 .logo p{
-margin-top:14px;
-letter-spacing:7px;
-font-size:12px;
-color:#d7b26d;
+margin-top:16px;
+font-size:14px;
+letter-spacing:6px;
+color:#e5bb68;
 }
 
 .nav{
@@ -75,109 +85,106 @@ display:flex;
 align-items:center;
 gap:14px;
 text-decoration:none;
-color:white;
-padding:15px 20px;
-border-radius:40px;
+padding:17px 22px;
+border-radius:50px;
 margin-bottom:18px;
-font-size:17px;
+font-size:18px;
+color:white;
 transition:0.3s;
+font-weight:500;
 }
 
 .nav a.active{
-background:#6f4965;
-color:#f1d27f;
+background:#f6e4cf;
+color:#29504f;
 }
 
 .bottom-text{
+margin-top:30px;
 font-size:15px;
-line-height:1.7;
-color:#f2dce4;
-margin-top:35px;
+line-height:1.8;
+color:#f3ece7;
 }
 
-.button{
+.contact-btn{
 display:inline-block;
-margin-top:22px;
-background:#d8a768;
-padding:15px 26px;
-border-radius:14px;
+margin-top:28px;
+padding:16px 28px;
+background:#d98a63;
 color:white;
 text-decoration:none;
+border-radius:18px;
 font-weight:600;
-font-size:14px;
+font-size:15px;
 }
 
 .socials{
 display:flex;
 gap:18px;
-margin-top:25px;
-font-size:22px;
-color:white;
+margin-top:28px;
+font-size:26px;
+color:#f6e4cf;
 }
 
 /* MAIN */
 
 .main{
-margin-left:230px;
-width:calc(100% - 230px);
-padding:45px 65px;
+margin-left:240px;
+width:calc(100% - 240px);
+padding:50px 60px;
+position:relative;
 }
 
 /* TOPBAR */
 
-.topbar{
+.top-icons{
 display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:45px;
-}
-
-.topbar h2{
-font-family:'Cormorant Garamond',serif;
-font-size:42px;
-font-weight:600;
-}
-
-.icons{
-display:flex;
-gap:22px;
-font-size:28px;
+justify-content:flex-end;
+gap:25px;
+font-size:30px;
+margin-bottom:30px;
+color:#274947;
 }
 
 /* HERO */
 
 .hero{
 display:grid;
-grid-template-columns:1.2fr 1fr;
-gap:80px;
+grid-template-columns:1fr 1.1fr;
+gap:70px;
 align-items:center;
-}
-
-/* TITLE */
-
-.hero-title{
-font-family:'Cormorant Garamond',serif;
-font-size:72px;
-line-height:0.95;
-font-weight:600;
-margin-bottom:28px;
-color:#2e1c3c;
-max-width:700px;
-word-break:normal;
-}
-
-.hero-title span{
-color:#c86f88;
 }
 
 /* TEXT */
 
+.hero-title{
+font-family:'Cormorant Garamond',serif;
+font-size:78px;
+line-height:0.9;
+font-weight:600;
+max-width:650px;
+margin-bottom:28px;
+}
+
+.hero-title .peach{
+color:#cb7c56;
+}
+
+.hero-title .green{
+color:#284645;
+}
+
+.hero-heart{
+font-size:48px;
+color:#d58b69;
+margin-bottom:25px;
+}
+
 .hero-text{
-font-size:22px;
-line-height:1.8;
+font-size:20px;
+line-height:1.9;
 max-width:620px;
-color:#44344b;
-margin-top:10px;
+color:#2f4443;
 }
 
 /* BUTTONS */
@@ -190,97 +197,125 @@ margin-top:45px;
 }
 
 .main-btn{
-background:linear-gradient(to right,#7b385a,#d86f8d);
-color:white;
-padding:22px 38px;
+background:#d17a55;
+padding:20px 36px;
 border-radius:50px;
 text-decoration:none;
-font-weight:600;
+color:white;
 font-size:16px;
-box-shadow:0 12px 30px rgba(0,0,0,0.12);
+font-weight:600;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 .watch{
 display:flex;
 align-items:center;
 gap:14px;
-font-size:16px;
-color:#5b3352;
+font-size:17px;
+font-weight:500;
+color:#31504f;
 }
 
 .play{
-width:56px;
-height:56px;
-border:1px solid #d6a5b6;
+width:64px;
+height:64px;
 border-radius:50%;
+border:2px solid #b5c1ad;
 display:flex;
 align-items:center;
 justify-content:center;
+font-size:24px;
+background:white;
 }
 
 /* HERO IMAGE */
 
 .hero-image{
-display:flex;
-justify-content:center;
-align-items:center;
+position:relative;
 }
 
 .hero-image img{
 width:100%;
-max-width:620px;
-height:620px;
+height:560px;
 object-fit:cover;
-border-radius:42px;
-box-shadow:0 20px 50px rgba(0,0,0,0.14);
+border-radius:38px;
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
 }
 
-/* GROWING */
-
-.growing{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:35px;
-margin-top:70px;
-align-items:start;
-}
-
-.grow-title{
-padding-top:35px;
-}
-
-.grow-small{
-font-family:'Cormorant Garamond',serif;
-font-size:70px;
-font-style:italic;
-line-height:0.8;
-color:#d06f8c;
-}
-
-.grow-big{
-font-family:'Cormorant Garamond',serif;
-font-size:66px;
-line-height:0.9;
-color:#312042;
+.flower{
+position:absolute;
+bottom:-25px;
+right:-35px;
+font-size:130px;
+opacity:0.95;
 }
 
 /* CARDS */
 
+.cards{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:35px;
+margin-top:75px;
+}
+
+.card{
+text-align:center;
+}
+
 .card img{
 width:100%;
-height:290px;
+height:250px;
 object-fit:cover;
-border-radius:30px;
-box-shadow:0 12px 30px rgba(0,0,0,0.12);
+border-radius:28px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card-icon{
+width:74px;
+height:74px;
+background:#c4c3a1;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+margin:-35px auto 18px;
+position:relative;
+color:white;
+border:8px solid #f7f1e8;
+}
+
+.card:nth-child(2) .card-icon{
+background:#d4895f;
+}
+
+.card:nth-child(3) .card-icon{
+background:#b590bc;
 }
 
 .card h3{
-text-align:center;
-margin-top:18px;
 font-family:'Cormorant Garamond',serif;
-font-size:28px;
-font-weight:600;
-color:#352347;
+font-size:38px;
+margin-bottom:14px;
+color:#284645;
+}
+
+.card p{
+font-size:17px;
+line-height:1.8;
+color:#445453;
+padding:0 10px;
+}
+
+/* DECOR */
+
+.corner-flower{
+position:absolute;
+right:10px;
+top:120px;
+font-size:150px;
+opacity:0.3;
 }
 
 /* RESPONSIVE */
@@ -289,21 +324,18 @@ color:#352347;
 
 .hero{
 grid-template-columns:1fr;
-gap:50px;
 }
 
 .hero-title{
-font-size:62px;
-max-width:100%;
+font-size:66px;
 }
 
 .hero-image img{
-max-width:100%;
-height:520px;
+height:500px;
 }
 
-.growing{
-grid-template-columns:1fr 1fr;
+.cards{
+grid-template-columns:1fr;
 }
 
 }
@@ -318,29 +350,31 @@ flex-direction:column;
 position:relative;
 width:100%;
 height:auto;
+padding:35px 25px;
 }
 
 .main{
 margin-left:0;
 width:100%;
-padding:30px;
+padding:35px 25px;
 }
 
 .hero{
 grid-template-columns:1fr;
+gap:45px;
 }
 
 .hero-title{
-font-size:48px;
-line-height:1;
+font-size:52px;
+line-height:0.95;
 }
 
 .hero-text{
-font-size:20px;
+font-size:18px;
 }
 
 .hero-image img{
-height:420px;
+height:380px;
 }
 
 .actions{
@@ -348,14 +382,20 @@ flex-direction:column;
 align-items:flex-start;
 }
 
-.growing{
+.cards{
 grid-template-columns:1fr;
+gap:55px;
 }
 
-.topbar{
-flex-direction:column;
-align-items:flex-start;
-gap:20px;
+.top-icons{
+justify-content:flex-start;
+margin-bottom:25px;
+}
+
+.flower{
+font-size:90px;
+right:-10px;
+bottom:-15px;
 }
 
 }
@@ -375,8 +415,19 @@ gap:20px;
 <div>
 
 <div class="logo">
-<h1>Rainbow Rose</h1>
-<p>CONNECT</p>
+
+<div class="logo-icon">
+✿
+</div>
+
+<h1>
+Rainbow Rose
+</h1>
+
+<p>
+CONNECT
+</p>
+
 </div>
 
 <div class="nav">
@@ -394,7 +445,7 @@ gap:20px;
 </a>
 
 <a href="#">
-◎ COMMUNITY
+◉ COMMUNITY
 </a>
 
 <a href="#">
@@ -415,7 +466,7 @@ gap:20px;
 Let’s grow connections together ♡
 </div>
 
-<a href="#" class="button">
+<a href="#" class="contact-btn">
 GET IN TOUCH
 </a>
 
@@ -433,42 +484,42 @@ GET IN TOUCH
 
 <div class="main">
 
-<!-- TOPBAR -->
-
-<div class="topbar">
-
-<h2>
-Rainbow Rose Connect
-</h2>
-
-<div class="icons">
+<div class="top-icons">
 <span>⌕</span>
 <span>◌</span>
-<span>☺</span>
-</div>
-
+<span>◕</span>
 </div>
 
 <!-- HERO -->
 
 <div class="hero">
 
+<!-- LEFT -->
+
 <div>
 
 <h1 class="hero-title">
 
-<span>
+<span class="peach">
 MORE THAN SUPPORT,
 </span>
 
 <br>
 
+<span class="green">
 REAL COMPANIONSHIP.
+</span>
 
 </h1>
 
+<div class="hero-heart">
+♡
+</div>
+
 <p class="hero-text">
-At Rainbow Rose Connect, we create supportive experiences where people can feel comfortable being themselves and supported every step of the way.
+
+At Rainbow Rose Connect, we believe passions should never be boxed in — whether it’s mountain climbing, circus performing, creative adventures, or something beautifully unexpected.
+
 </p>
 
 <div class="actions">
@@ -495,53 +546,81 @@ OUR STORY
 
 </div>
 
-<!-- HERO IMAGE -->
+<!-- RIGHT -->
 
 <div class="hero-image">
 
-<img src="paint.png">
+<img src="mountainclimbing.jpg">
 
+<div class="flower">
+🌸
 </div>
 
 </div>
 
-<!-- GROWING TOGETHER -->
-
-<div class="growing">
-
-<div class="grow-title">
-
-<div class="grow-small">
-Growing
 </div>
 
-<div class="grow-big">
-Together
-</div>
+<!-- CARDS -->
 
-</div>
+<div class="cards">
 
-<!-- CLIMB -->
+<!-- CARD 1 -->
 
 <div class="card">
 
-<img src="climb.png">
+<img src="dancing.jpg">
+
+<div class="card-icon">
+❀
+</div>
 
 <h3>
-BUILDING CONFIDENCE
+Empowering Potential
 </h3>
+
+<p>
+We encourage people to explore their interests and express themselves freely.
+</p>
 
 </div>
 
-<!-- WHEELCHAIR -->
+<!-- CARD 2 -->
 
 <div class="card">
 
-<img src="wheelchair.png">
+<img src="community.png">
+
+<div class="card-icon">
+◎
+</div>
 
 <h3>
-COMMUNITY CONNECTION
+Building Connections
 </h3>
+
+<p>
+We create safe, inclusive spaces where people feel seen, valued, and connected.
+</p>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+<img src="eating.jpg">
+
+<div class="card-icon">
+♡
+</div>
+
+<h3>
+Community In Action
+</h3>
+
+<p>
+We support every individual to live with confidence, joy, and purpose.
+</p>
 
 </div>
 
