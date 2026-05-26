@@ -1,152 +1,125 @@
+import React from "react";
+
 export default function RainbowRoseConnect() {
-  const cards = [
-    {
-      title: 'SHARED MOMENTS',
-      image:
-        'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      title: 'BUILDING CONFIDENCE',
-      image:
-        'https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      title: 'COMMUNITY CONNECTION',
-      image:
-        'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop',
-    },
-  ];
-
   return (
-    <div className="min-h-screen bg-[#f7efe9] text-[#4a2d3f] overflow-x-hidden flex flex-col lg:flex-row font-sans">
-      {/* Sidebar */}
-      <aside className="w-full lg:w-80 bg-gradient-to-b from-[#4a2035] to-[#6d304c] text-white relative p-6 flex flex-col justify-between">
+    <div className="min-h-screen flex bg-[#f5f1ed] overflow-x-hidden">
+      
+      {/* SIDEBAR */}
+      <aside className="w-[300px] bg-[#2a002f] text-white min-h-screen p-8 flex flex-col justify-between">
+        
         <div>
-          <div className="flex items-center gap-3 mb-10">
-            <div className="w-12 h-12 rounded-full border border-yellow-300 flex items-center justify-center text-yellow-300 text-2xl">
-              ✿
-            </div>
-            <div>
-              <h1 className="text-2xl font-serif leading-none">Rainbow Rose</h1>
-              <p className="tracking-[0.3em] text-sm text-yellow-200 mt-1">
-                CONNECT
-              </p>
-            </div>
+          {/* LOGO */}
+          <div className="mb-14">
+            <h1 className="text-6xl leading-none font-serif">
+              Rainbow
+              <br />
+              Rose
+            </h1>
+
+            <p className="tracking-[0.4em] text-[#d39a5f] mt-6 text-sm">
+              CONNECT
+            </p>
           </div>
 
-          <nav className="space-y-3">
-            {['HOME', 'OUR CARE', 'SERVICES', 'COMMUNITY', 'ABOUT US', 'CONTACT'].map((item, index) => (
-              <button
-                key={item}
-                className={`w-full text-left px-5 py-3 rounded-full transition-all ${
-                  index === 0
-                    ? 'bg-[#d8a8b8] text-[#4a2035] font-semibold'
-                    : 'hover:bg-white/10'
-                }`}
-              >
-                {item}
-              </button>
-            ))}
+          {/* NAVIGATION */}
+          <nav className="space-y-8 text-2xl">
+            <div className="bg-[#a46f95] rounded-full px-7 py-5 w-fit">
+              🏠 HOME
+            </div>
+
+            <div>✿ SERVICES</div>
+
+            <div>⊙ COMMUNITY</div>
+
+            <div>❀ ABOUT US</div>
+
+            <div>✉ CONTACT</div>
           </nav>
-
-          <div className="mt-10 text-sm text-[#f3dce4] italic">
-            Let’s grow connections together ♡
-          </div>
         </div>
 
-        <div className="mt-10">
-          <button className="bg-yellow-200 text-[#4a2035] px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform w-full">
-            GET IN TOUCH
-          </button>
+        {/* SOCIALS */}
+        <div className="flex gap-5 pb-6">
+          <div className="w-16 h-16 rounded-full border border-white flex items-center justify-center text-2xl">
+            f
+          </div>
 
-          <div className="flex gap-4 mt-6 text-xl text-[#f8d7e2]">
-            <span>○</span>
-            <span>◐</span>
-            <span>◌</span>
+          <div className="w-16 h-16 rounded-full border border-white flex items-center justify-center text-2xl">
+            ◎
+          </div>
+
+          <div className="w-16 h-16 rounded-full border border-white flex items-center justify-center text-2xl">
+            ◌
           </div>
         </div>
       </aside>
 
-      {/* Main Content */}
-      <main className="flex-1 p-6 md:p-10 lg:p-14">
-        {/* Hero */}
-        <section className="grid lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="uppercase tracking-[0.25em] text-sm text-[#a66d83] mb-4">
-              Rainbow Rose Connect
-            </p>
+      {/* MAIN CONTENT */}
+      <main className="flex-1 px-14 py-10">
 
-            <h2 className="text-5xl md:text-6xl font-serif leading-tight text-[#4a2035]">
-              MORE THAN SUPPORT,
-              <span className="block text-[#a66d83] mt-2">
-                REAL COMPANIONSHIP.
+        {/* TOP ICONS */}
+        <div className="flex justify-end gap-8 text-3xl text-[#3f1648] mb-12">
+          <div>⌕</div>
+          <div>◌</div>
+          <div>◐</div>
+        </div>
+
+        {/* HERO SECTION */}
+        <section className="grid grid-cols-2 gap-16 items-center">
+
+          {/* LEFT SIDE */}
+          <div>
+
+            <h2 className="text-[5.5rem] leading-[0.95] font-serif text-[#3b1245]">
+              <span className="text-[#dc7c55]">
+                MORE THAN
+                <br />
+                SUPPORT,
               </span>
+              <br />
+              REAL
+              <br />
+              COMPANIONSHIP
             </h2>
 
-            <div className="text-3xl text-[#d8a8b8] mt-4">❦</div>
+            <div className="text-[#dc7c55] text-6xl mt-8">
+              ♡
+            </div>
 
-            <p className="mt-6 text-lg text-[#6a5060] leading-relaxed max-w-xl">
-              At Rainbow Rose Connect, we create supportive experiences where
-              people can feel comfortable being themselves and supported every
-              step of the way.
+            {/* UPDATED PARAGRAPH */}
+            <p className="mt-10 text-[2rem] leading-relaxed text-[#4f4251] max-w-3xl">
+              At Rainbow Rose Connect, we believe that passion
+              should never be boxed in — whether it’s exploring
+              the expansive Blue Mountains, creative adventures,
+              meaningful connections, or something beautifully
+              unexpected.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <button className="bg-gradient-to-r from-[#c78aa0] to-[#9f6177] text-white px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform">
-                BEGIN YOUR JOURNEY
-              </button>
+            {/* WATCH BUTTON */}
+            <div className="flex items-center gap-6 mt-16">
+              <div className="w-24 h-24 rounded-full border-2 border-[#5a2f61] flex items-center justify-center text-4xl text-[#5a2f61]">
+                ▶
+              </div>
 
-              <button className="flex items-center gap-3 text-[#4a2035] font-medium">
-                <span className="w-12 h-12 rounded-full border-2 border-[#a66d83] flex items-center justify-center">
-                  ▶
-                </span>
-                WATCH OUR STORY
-              </button>
+              <div className="text-3xl text-[#5a2f61] uppercase tracking-wide">
+                Watch
+                <br />
+                Our Story
+              </div>
             </div>
+
           </div>
 
+          {/* RIGHT IMAGE */}
           <div>
             <img
-              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1200&auto=format&fit=crop"
-              alt="Joyful child"
-              className="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl"
+              src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop"
+              alt="Community"
+              className="w-full h-[900px] object-cover rounded-[3rem]"
             />
           </div>
+
         </section>
 
-        {/* Growing Together */}
-        <section className="mt-24">
-          <div className="text-center mb-12">
-            <h3 className="text-5xl font-serif text-[#a66d83] italic">
-              Growing
-            </h3>
-            <h4 className="text-4xl font-serif tracking-[0.2em] text-[#4a2035] mt-2">
-              TOGETHER
-            </h4>
-            <div className="text-2xl text-[#d8a8b8] mt-4">✿ ❦ ✿</div>
-          </div>
-
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {cards.map((card) => (
-              <div
-                key={card.title}
-                className="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:-translate-y-2 transition-transform"
-              >
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-72 object-cover"
-                />
-
-                <div className="p-6 text-center">
-                  <h5 className="tracking-[0.15em] text-[#4a2035] font-semibold">
-                    {card.title}
-                  </h5>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
       </main>
     </div>
   );
