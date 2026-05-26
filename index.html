@@ -1,582 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
+export default function RainbowRoseConnect() {
+  const cards = [
+    {
+      title: 'SHARED MOMENTS',
+      image:
+        'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+      title: 'BUILDING CONFIDENCE',
+      image:
+        'https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1200&auto=format&fit=crop',
+    },
+    {
+      title: 'COMMUNITY CONNECTION',
+      image:
+        'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop',
+    },
+  ];
 
-<head>
+  return (
+    <div className="min-h-screen bg-[#f7efe9] text-[#4a2d3f] overflow-x-hidden flex flex-col lg:flex-row font-sans">
+      {/* Sidebar */}
+      <aside className="w-full lg:w-80 bg-gradient-to-b from-[#4a2035] to-[#6d304c] text-white relative p-6 flex flex-col justify-between">
+        <div>
+          <div className="flex items-center gap-3 mb-10">
+            <div className="w-12 h-12 rounded-full border border-yellow-300 flex items-center justify-center text-yellow-300 text-2xl">
+              ✿
+            </div>
+            <div>
+              <h1 className="text-2xl font-serif leading-none">Rainbow Rose</h1>
+              <p className="tracking-[0.3em] text-sm text-yellow-200 mt-1">
+                CONNECT
+              </p>
+            </div>
+          </div>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <nav className="space-y-3">
+            {['HOME', 'OUR CARE', 'SERVICES', 'COMMUNITY', 'ABOUT US', 'CONTACT'].map((item, index) => (
+              <button
+                key={item}
+                className={`w-full text-left px-5 py-3 rounded-full transition-all ${
+                  index === 0
+                    ? 'bg-[#d8a8b8] text-[#4a2035] font-semibold'
+                    : 'hover:bg-white/10'
+                }`}
+              >
+                {item}
+              </button>
+            ))}
+          </nav>
 
-<title>Rainbow Rose Connect</title>
+          <div className="mt-10 text-sm text-[#f3dce4] italic">
+            Let’s grow connections together ♡
+          </div>
+        </div>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <div className="mt-10">
+          <button className="bg-yellow-200 text-[#4a2035] px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform w-full">
+            GET IN TOUCH
+          </button>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+          <div className="flex gap-4 mt-6 text-xl text-[#f8d7e2]">
+            <span>○</span>
+            <span>◐</span>
+            <span>◌</span>
+          </div>
+        </div>
+      </aside>
 
-<style>
+      {/* Main Content */}
+      <main className="flex-1 p-6 md:p-10 lg:p-14">
+        {/* Hero */}
+        <section className="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <p className="uppercase tracking-[0.25em] text-sm text-[#a66d83] mb-4">
+              Rainbow Rose Connect
+            </p>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+            <h2 className="text-5xl md:text-6xl font-serif leading-tight text-[#4a2035]">
+              MORE THAN SUPPORT,
+              <span className="block text-[#a66d83] mt-2">
+                REAL COMPANIONSHIP.
+              </span>
+            </h2>
+
+            <div className="text-3xl text-[#d8a8b8] mt-4">❦</div>
+
+            <p className="mt-6 text-lg text-[#6a5060] leading-relaxed max-w-xl">
+              At Rainbow Rose Connect, we create supportive experiences where
+              people can feel comfortable being themselves and supported every
+              step of the way.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <button className="bg-gradient-to-r from-[#c78aa0] to-[#9f6177] text-white px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform">
+                BEGIN YOUR JOURNEY
+              </button>
+
+              <button className="flex items-center gap-3 text-[#4a2035] font-medium">
+                <span className="w-12 h-12 rounded-full border-2 border-[#a66d83] flex items-center justify-center">
+                  ▶
+                </span>
+                WATCH OUR STORY
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1200&auto=format&fit=crop"
+              alt="Joyful child"
+              className="w-full h-[500px] object-cover rounded-[2rem] shadow-2xl"
+            />
+          </div>
+        </section>
+
+        {/* Growing Together */}
+        <section className="mt-24">
+          <div className="text-center mb-12">
+            <h3 className="text-5xl font-serif text-[#a66d83] italic">
+              Growing
+            </h3>
+            <h4 className="text-4xl font-serif tracking-[0.2em] text-[#4a2035] mt-2">
+              TOGETHER
+            </h4>
+            <div className="text-2xl text-[#d8a8b8] mt-4">✿ ❦ ✿</div>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {cards.map((card) => (
+              <div
+                key={card.title}
+                className="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:-translate-y-2 transition-transform"
+              >
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-72 object-cover"
+                />
+
+                <div className="p-6 text-center">
+                  <h5 className="tracking-[0.15em] text-[#4a2035] font-semibold">
+                    {card.title}
+                  </h5>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }
-
-body{
-background:#f6f2ed;
-font-family:'Montserrat',sans-serif;
-overflow-x:hidden;
-color:#2d1b30;
-}
-
-/* =========================
-MAIN LAYOUT
-========================= */
-
-.container{
-display:flex;
-min-height:100vh;
-}
-
-/* =========================
-SIDEBAR
-========================= */
-
-.sidebar{
-width:300px;
-background:linear-gradient(to bottom,#230325,#4b1f48);
-padding:40px 32px;
-position:fixed;
-top:0;
-left:0;
-bottom:0;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-}
-
-.logo{
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-}
-
-.logo img{
-width:125px;
-margin-bottom:18px;
-}
-
-.logo h1{
-font-family:'Cormorant Garamond',serif;
-font-size:66px;
-line-height:0.88;
-font-weight:600;
-color:white;
-}
-
-.logo p{
-margin-top:14px;
-font-size:15px;
-letter-spacing:7px;
-color:#d9a15d;
-padding-left:4px;
-}
-
-/* =========================
-NAVIGATION
-========================= */
-
-.nav{
-margin-top:45px;
-}
-
-.nav a{
-display:flex;
-align-items:center;
-gap:18px;
-padding:21px 26px;
-margin-bottom:18px;
-border-radius:60px;
-text-decoration:none;
-font-size:20px;
-color:white;
-transition:0.3s;
-}
-
-.nav a.active{
-background:#966586;
-}
-
-.nav a:hover{
-background:#744f6b;
-}
-
-/* =========================
-SOCIALS
-========================= */
-
-.socials{
-display:flex;
-gap:22px;
-}
-
-.socials span{
-width:60px;
-height:60px;
-border-radius:50%;
-border:1px solid rgba(255,255,255,0.4);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-color:white;
-}
-
-/* =========================
-MAIN CONTENT
-========================= */
-
-.main{
-margin-left:300px;
-width:calc(100% - 300px);
-padding:42px 52px 70px;
-}
-
-/* =========================
-TOP ICONS
-========================= */
-
-.top-icons{
-display:flex;
-justify-content:flex-end;
-gap:24px;
-font-size:32px;
-color:#341437;
-margin-bottom:26px;
-}
-
-/* =========================
-HERO SECTION
-========================= */
-
-.hero{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:42px;
-align-items:center;
-}
-
-/* =========================
-LEFT SIDE TEXT
-========================= */
-
-.hero-title{
-font-family:'Cormorant Garamond',serif;
-font-size:68px;
-line-height:0.9;
-font-weight:600;
-margin-bottom:24px;
-}
-
-.orange{
-color:#df7247;
-}
-
-.plum{
-color:#351438;
-}
-
-.heart{
-font-size:56px;
-color:#df7247;
-margin-bottom:22px;
-}
-
-.hero-text{
-font-size:20px;
-line-height:1.9;
-max-width:620px;
-color:#40343c;
-}
-
-/* =========================
-WATCH STORY
-========================= */
-
-.watch{
-display:flex;
-align-items:center;
-gap:16px;
-margin-top:42px;
-font-size:18px;
-color:#351438;
-}
-
-.play{
-width:78px;
-height:78px;
-border-radius:50%;
-border:2px solid #5f3d61;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-background:white;
-}
-
-/* =========================
-HERO IMAGE
-========================= */
-
-.hero-image{
-width:100%;
-}
-
-.hero-image img{
-width:100%;
-height:620px;
-object-fit:cover;
-object-position:center;
-border-radius:42px;
-box-shadow:0 18px 35px rgba(0,0,0,0.12);
-display:block;
-}
-
-/* =========================
-CARDS
-========================= */
-
-.cards{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:34px;
-margin-top:78px;
-}
-
-.card{
-text-align:center;
-}
-
-.card img{
-width:100%;
-height:260px;
-object-fit:cover;
-border-radius:28px;
-box-shadow:0 10px 24px rgba(0,0,0,0.08);
-}
-
-.card-icon{
-width:82px;
-height:82px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-margin:-42px auto 18px;
-position:relative;
-font-size:34px;
-color:white;
-border:8px solid #f6f2ed;
-}
-
-.icon1{
-background:#b9ad92;
-}
-
-.icon2{
-background:#df7247;
-}
-
-.icon3{
-background:#9b6a92;
-}
-
-.card h3{
-font-size:20px;
-font-weight:700;
-color:#351438;
-margin-top:12px;
-}
-
-.line{
-width:46px;
-height:2px;
-background:#df7247;
-margin:18px auto 0;
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-
-@media(max-width:1300px){
-
-.hero{
-grid-template-columns:1fr;
-}
-
-.cards{
-grid-template-columns:1fr;
-}
-
-.hero-image img{
-height:520px;
-}
-
-}
-
-@media(max-width:768px){
-
-.container{
-flex-direction:column;
-}
-
-.sidebar{
-position:relative;
-width:100%;
-height:auto;
-padding:34px 24px;
-}
-
-.main{
-margin-left:0;
-width:100%;
-padding:30px 22px 60px;
-}
-
-.hero{
-grid-template-columns:1fr;
-gap:42px;
-}
-
-.hero-title{
-font-size:52px;
-}
-
-.hero-text{
-font-size:18px;
-}
-
-.hero-image img{
-height:420px;
-}
-
-.cards{
-grid-template-columns:1fr;
-gap:52px;
-}
-
-.logo h1{
-font-size:54px;
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="container">
-
-<!-- =========================
-SIDEBAR
-========================= -->
-
-<div class="sidebar">
-
-<div>
-
-<div class="logo">
-
-<img src="logo.png">
-
-<h1>
-Rainbow Rose
-</h1>
-
-<p>
-CONNECT
-</p>
-
-</div>
-
-<div class="nav">
-
-<a href="#" class="active">
-🏠 HOME
-</a>
-
-<a href="#">
-✿ SERVICES
-</a>
-
-<a href="#">
-◉ COMMUNITY
-</a>
-
-<a href="#">
-❀ ABOUT US
-</a>
-
-<a href="#">
-✉ CONTACT
-</a>
-
-</div>
-
-</div>
-
-<div class="socials">
-
-<span>f</span>
-<span>◎</span>
-<span>◌</span>
-
-</div>
-
-</div>
-
-<!-- =========================
-MAIN CONTENT
-========================= -->
-
-<div class="main">
-
-<div class="top-icons">
-
-<span>⌕</span>
-<span>◌</span>
-<span>◑</span>
-
-</div>
-
-<!-- HERO -->
-
-<div class="hero">
-
-<!-- LEFT -->
-
-<div>
-
-<h1 class="hero-title">
-
-<span class="orange">
-MORE THAN SUPPORT,
-</span>
-
-<br>
-
-<span class="plum">
-REAL
-<br>
-COMPANIONSHIP
-</span>
-
-</h1>
-
-<div class="heart">
-♡
-</div>
-
-<p class="hero-text">
-
-At Rainbow Rose Connect, we believe that passion should never be boxed in — whether it’s mountain climbing, circus performing, creative adventures, or something beautifully unexpected.
-
-</p>
-
-<div class="watch">
-
-<div class="play">
-▶
-</div>
-
-<div>
-WATCH
-<br>
-OUR STORY
-</div>
-
-</div>
-
-</div>
-
-<!-- RIGHT -->
-
-<div class="hero-image">
-
-<img src="mountainclimbing.jpg">
-
-</div>
-
-</div>
-
-<!-- =========================
-CARDS
-========================= -->
-
-<div class="cards">
-
-<!-- CARD 1 -->
-
-<div class="card">
-
-<img src="dancing.jpg">
-
-<div class="card-icon icon1">
-❀
-</div>
-
-<h3>
-EMPOWERING POTENTIAL
-</h3>
-
-<div class="line"></div>
-
-</div>
-
-<!-- CARD 2 -->
-
-<div class="card">
-
-<img src="community.png">
-
-<div class="card-icon icon2">
-◎
-</div>
-
-<h3>
-BUILDING CONNECTIONS
-</h3>
-
-<div class="line"></div>
-
-</div>
-
-<!-- CARD 3 -->
-
-<div class="card">
-
-<img src="eating.jpg">
-
-<div class="card-icon icon3">
-♡
-</div>
-
-<h3>
-COMMUNITY IN ACTION
-</h3>
-
-<div class="line"></div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</body>
-
-</html>
