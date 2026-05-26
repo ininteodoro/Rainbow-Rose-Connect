@@ -1,126 +1,595 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow Rose Connect</title>
 
-export default function RainbowRoseConnect() {
-  return (
-    <div className="min-h-screen flex bg-[#f5f1ed] overflow-x-hidden">
-      
-      {/* SIDEBAR */}
-      <aside className="w-[300px] bg-[#2a002f] text-white min-h-screen p-8 flex flex-col justify-between">
-        
-        <div>
-          {/* LOGO */}
-          <div className="mb-14">
-            <h1 className="text-6xl leading-none font-serif">
-              Rainbow
-              <br />
-              Rose
-            </h1>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
 
-            <p className="tracking-[0.4em] text-[#d39a5f] mt-6 text-sm">
-              CONNECT
-            </p>
-          </div>
+<style>
 
-          {/* NAVIGATION */}
-          <nav className="space-y-8 text-2xl">
-            <div className="bg-[#a46f95] rounded-full px-7 py-5 w-fit">
-              🏠 HOME
-            </div>
-
-            <div>✿ SERVICES</div>
-
-            <div>⊙ COMMUNITY</div>
-
-            <div>❀ ABOUT US</div>
-
-            <div>✉ CONTACT</div>
-          </nav>
-        </div>
-
-        {/* SOCIALS */}
-        <div className="flex gap-5 pb-6">
-          <div className="w-16 h-16 rounded-full border border-white flex items-center justify-center text-2xl">
-            f
-          </div>
-
-          <div className="w-16 h-16 rounded-full border border-white flex items-center justify-center text-2xl">
-            ◎
-          </div>
-
-          <div className="w-16 h-16 rounded-full border border-white flex items-center justify-center text-2xl">
-            ◌
-          </div>
-        </div>
-      </aside>
-
-      {/* MAIN CONTENT */}
-      <main className="flex-1 px-14 py-10">
-
-        {/* TOP ICONS */}
-        <div className="flex justify-end gap-8 text-3xl text-[#3f1648] mb-12">
-          <div>⌕</div>
-          <div>◌</div>
-          <div>◐</div>
-        </div>
-
-        {/* HERO SECTION */}
-        <section className="grid grid-cols-2 gap-16 items-center">
-
-          {/* LEFT SIDE */}
-          <div>
-
-            <h2 className="text-[5.5rem] leading-[0.95] font-serif text-[#3b1245]">
-              <span className="text-[#dc7c55]">
-                MORE THAN
-                <br />
-                SUPPORT,
-              </span>
-              <br />
-              REAL
-              <br />
-              COMPANIONSHIP
-            </h2>
-
-            <div className="text-[#dc7c55] text-6xl mt-8">
-              ♡
-            </div>
-
-            {/* UPDATED PARAGRAPH */}
-            <p className="mt-10 text-[2rem] leading-relaxed text-[#4f4251] max-w-3xl">
-              At Rainbow Rose Connect, we believe that passion
-              should never be boxed in — whether it’s exploring
-              the expansive Blue Mountains, creative adventures,
-              meaningful connections, or something beautifully
-              unexpected.
-            </p>
-
-            {/* WATCH BUTTON */}
-            <div className="flex items-center gap-6 mt-16">
-              <div className="w-24 h-24 rounded-full border-2 border-[#5a2f61] flex items-center justify-center text-4xl text-[#5a2f61]">
-                ▶
-              </div>
-
-              <div className="text-3xl text-[#5a2f61] uppercase tracking-wide">
-                Watch
-                <br />
-                Our Story
-              </div>
-            </div>
-
-          </div>
-
-          {/* RIGHT IMAGE */}
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop"
-              alt="Community"
-              className="w-full h-[900px] object-cover rounded-[3rem]"
-            />
-          </div>
-
-        </section>
-
-      </main>
-    </div>
-  );
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+body{
+    background:#f7f1ec;
+    color:#3d2340;
+    overflow-x:hidden;
+    font-family:'Montserrat',sans-serif;
+}
+
+/* MAIN LAYOUT */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:300px;
+    background:linear-gradient(to bottom,#3a063c,#5a2a59);
+    color:white;
+    padding:35px 28px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    position:relative;
+    overflow:hidden;
+}
+
+.sidebar::before{
+    content:"";
+    position:absolute;
+    bottom:-40px;
+    left:-30px;
+    width:220px;
+    height:220px;
+    background:url('https://images.unsplash.com/photo-1518895949257-7621c3c786d7?q=80&w=1200&auto=format&fit=crop');
+    background-size:cover;
+    opacity:0.35;
+    border-radius:50%;
+    filter:blur(1px);
+}
+
+.logo{
+    position:relative;
+    z-index:2;
+}
+
+.logo img{
+    width:90px;
+    margin-bottom:15px;
+}
+
+.logo h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:54px;
+    line-height:0.9;
+    font-weight:600;
+}
+
+.logo p{
+    margin-top:14px;
+    color:#e4ab6f;
+    letter-spacing:6px;
+    font-size:13px;
+}
+
+/* NAV */
+
+.nav{
+    margin-top:60px;
+    position:relative;
+    z-index:2;
+}
+
+.nav-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:24px;
+    font-size:16px;
+    transition:0.3s;
+    cursor:pointer;
+    width:fit-content;
+}
+
+.nav-item:hover{
+    transform:translateX(6px);
+}
+
+.active{
+    background:#b987a6;
+    padding:15px 22px;
+    border-radius:40px;
+    width:220px;
+}
+
+.sidebar-text{
+    margin-top:40px;
+    color:#f1dfe7;
+    line-height:1.7;
+    font-size:15px;
+    font-family:'Parisienne',cursive;
+}
+
+.contact-btn{
+    margin-top:25px;
+    background:#d77d5d;
+    color:white;
+    border:none;
+    padding:15px 28px;
+    border-radius:40px;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact-btn:hover{
+    transform:translateY(-4px);
+}
+
+.socials{
+    display:flex;
+    gap:14px;
+    margin-top:25px;
+}
+
+.social{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.social:hover{
+    background:rgba(255,255,255,0.1);
+}
+
+/* MAIN CONTENT */
+
+.main{
+    flex:1;
+    padding:40px 60px;
+}
+
+/* TOP ICONS */
+
+.top-icons{
+    display:flex;
+    justify-content:flex-end;
+    gap:22px;
+    font-size:22px;
+    color:#5d345e;
+    margin-bottom:30px;
+}
+
+/* HERO */
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.hero-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:84px;
+    line-height:0.9;
+    font-weight:600;
+}
+
+.orange{
+    color:#d87959;
+}
+
+.heart{
+    margin-top:18px;
+    color:#d87959;
+    font-size:52px;
+}
+
+.hero-description{
+    margin-top:28px;
+    font-size:19px;
+    line-height:1.9;
+    color:#5b4d58;
+    max-width:620px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.journey-btn{
+    background:linear-gradient(to right,#d98267,#b65d63);
+    color:white;
+    border:none;
+    padding:18px 30px;
+    border-radius:50px;
+    font-size:14px;
+    letter-spacing:1px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.journey-btn:hover{
+    transform:translateY(-5px);
+}
+
+.watch{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.play{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:2px solid #5d345e;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#5d345e;
+    font-size:24px;
+}
+
+.watch-text{
+    color:#5d345e;
+    font-size:15px;
+    line-height:1.4;
+    text-transform:uppercase;
+}
+
+/* HERO IMAGE */
+
+.hero-image img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    border-radius:40px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* GROWING SECTION */
+
+.growing{
+    margin-top:90px;
+}
+
+.growing-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.growing-title h2{
+    font-family:'Parisienne',cursive;
+    color:#cc7d96;
+    font-size:64px;
+    font-weight:400;
+}
+
+.growing-title h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:56px;
+    letter-spacing:6px;
+    margin-top:-10px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.card{
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:24px;
+    text-align:center;
+}
+
+.card-content h4{
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.card-content p{
+    font-size:14px;
+    line-height:1.8;
+    color:#6a5b66;
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .main{
+        padding:35px 22px;
+    }
+
+    .hero-title{
+        font-size:58px;
+    }
+
+    .hero-description{
+        font-size:17px;
+    }
+
+    .hero-image img{
+        height:420px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div>
+
+<div class="logo">
+
+<img src="https://cdn-icons-png.flaticon.com/512/616/616490.png">
+
+<h1>
+Rainbow Rose
+</h1>
+
+<p>CONNECT</p>
+
+</div>
+
+<div class="nav">
+
+<div class="nav-item active">🏠 HOME</div>
+
+<div class="nav-item">♡ OUR CARE</div>
+
+<div class="nav-item">✿ SERVICES</div>
+
+<div class="nav-item">❀ COMMUNITY</div>
+
+<div class="nav-item">⚘ ABOUT US</div>
+
+<div class="nav-item">✉ CONTACT</div>
+
+</div>
+
+<div class="sidebar-text">
+Let’s grow connections together ♡
+</div>
+
+<button class="contact-btn">
+GET IN TOUCH
+</button>
+
+</div>
+
+<div class="socials">
+
+<div class="social">f</div>
+
+<div class="social">◎</div>
+
+<div class="social">◌</div>
+
+</div>
+
+</aside>
+
+<!-- MAIN -->
+
+<main class="main">
+
+<div class="top-icons">
+
+<div>⌕</div>
+<div>◌</div>
+<div>◐</div>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<h2 class="hero-title">
+
+<span class="orange">
+MORE THAN
+<br>
+SUPPORT,
+</span>
+
+<br>
+
+REAL
+<br>
+
+COMPANIONSHIP.
+
+</h2>
+
+<div class="heart">♡</div>
+
+<p class="hero-description">
+
+At Rainbow Rose Connect, we believe that passion should never be boxed in — whether it’s exploring the expansive Blue Mountains, circus performing, creative adventures, or something beautifully unexpected.
+
+</p>
+
+<div class="hero-buttons">
+
+<button class="journey-btn">
+BEGIN YOUR JOURNEY →
+</button>
+
+<div class="watch">
+
+<div class="play">▶</div>
+
+<div class="watch-text">
+WATCH
+<br>
+OUR STORY
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- HERO IMAGE -->
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- GROWING TOGETHER -->
+
+<section class="growing">
+
+<div class="growing-title">
+
+<h2>Growing</h2>
+
+<h3>TOGETHER</h3>
+
+</div>
+
+<div class="cards">
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h4>Empowering Potential</h4>
+
+<p>
+We encourage people to explore their interests and express themselves freely.
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h4>Building Connections</h4>
+
+<p>
+We create safe, inclusive spaces where people feel seen, valued and connected.
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h4>Community In Action</h4>
+
+<p>
+We support every individual to live with confidence, joy and purpose.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+</body>
+</html>
